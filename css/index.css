@@ -1,7 +1,6 @@
 html{
     height: 100%;	
 }
-/*最外层容器样式*/
 .wrap{
 	position: absolute;
 	top: 100%;
@@ -10,21 +9,18 @@ html{
 	width: 400px;
 	height: 400px;
 	margin: auto;
-	/*改变左右上下,图片方块移动*/
 	
 }
-/*包裹所有容器样式*/
 .cube{
 	width: 400px;
 	height: 400px;
 	margin: 0 auto;
 	transform-style: preserve-3d;
 	transform: rotateX(-30deg) rotateY(-80deg);
-	-webkit-animation: rotate 20s infinite;
-	/*匀速*/
+	animation: rotate 20s infinite;
 	animation-timing-function: linear;
 }
-@-webkit-keyframes rotate{
+@keyframes rotate{
 	from{transform: rotateX(0deg) rotateY(0deg);}
 	to{transform: rotateX(360deg) rotateY(360deg);}
 }
@@ -35,7 +31,6 @@ html{
 	opacity: 0.8;
 	transition: all .4s;
 }
-/*定义所有图片样式*/
 .pic{
 	width: 400px;
 	height: 400px;
@@ -58,7 +53,6 @@ html{
 .cube .out_bottom{
 	transform: rotateX(-90deg) translateZ(200px);
 }
-/*定义小正方体样式*/
 .cube span{
 	display: bloack;
 	width: 200px;
@@ -89,7 +83,6 @@ html{
 .cube .in_bottom{
 	transform: rotateX(-90deg) translateZ(100px);
 }
-/*鼠标移入后样式*/
 .cube:hover .out_front{
 	transform: rotateY(0deg) translateZ(400px);
 }
